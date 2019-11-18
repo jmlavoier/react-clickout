@@ -6,6 +6,9 @@
   "repository": "git@github.com:jmlavoier/react-clickout.git",
   "author": "João Lavoier <jmlavoier@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint src"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.0.1",
