@@ -5,5 +5,10 @@
   "main": "index.js",
   "repository": "git@github.com:jmlavoier/react-clickout.git",
   "author": "João Lavoier <jmlavoier@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
 }
