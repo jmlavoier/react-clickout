@@ -2,14 +2,19 @@
   "name": "react-clickout",
   "version": "0.0.1",
   "description": "custom react hook to handle an event on click ouside of a component",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:jmlavoier/react-clickout.git",
   "author": "João Lavoier <jmlavoier@hotmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
     "build": "babel src -o dist/index.js",
-    "test": "jest tests"
+    "test": "jest tests",
+    "test:watch": "jest tests --watch"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -17,14 +22,17 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-jest": "^24.9.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^23.0.4",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "jest": "^24.9.0",
+    "jsdom": "^15.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"

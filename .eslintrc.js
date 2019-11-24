@@ -19,9 +19,12 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react", "jest",
+        "react", "jest", "react-hooks",
     ],
     "rules": {
-     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     }
 };
