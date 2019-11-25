@@ -1,15 +1,23 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { act } from 'react-dom/test-utils';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import useClickout from '../src';
 
 describe('use-clickout', () => {
-  it('should call handleClickout event', () => {
-    const clickFn = jest.fn();
+  it('should call event', () => {
+    const map = {};
+    const mockFn = jest.fn();
+    window.document.addEventListener = jest.fn((eventName, eventFn) => {
+      map[eventName] = eventFn;
+    });
 
     const Wrapper = () => {
-      const [refWrap] = useClickout({ handleClickout: clickFn });
+      const [refWrap, bindClickout] = useClickout();
+
+      bindClickout(mockFn);
 
       return (
         <div>
@@ -21,11 +29,13 @@ describe('use-clickout', () => {
       );
     };
 
-    const wrapper = shallow(<Wrapper />);
+    // eslint-disable-next-line no-unused-vars
+    const wrapper = mount(<Wrapper />);
+
     act(() => {
-      wrapper.find('.out').get(0).click();
+      map.mousedown({});
     });
 
-    expect(clickFn).toHaveBeenCalled();
+    expect(mockFn).toHaveBeenCalled();
   });
 });
