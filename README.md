@@ -22,19 +22,20 @@ npm i react-use-clickout
 
 ```js
 import React from 'react';
-import useClickout from 'react-clickout';
+import useClickout from 'react-use-clickout';
+
 
 function App() {
   const [
     ref, // it's to be assigned to the component reference
-    bindClickout // it's a function to passa callback binding your clickout event
+    bindHandler // it's a function to bind a callback handler
   ] = useClickout();
   
   /**
-   * The function passed as a callback you be called 
+   * The function passed as a callback will be called 
    * if clicked out of the referenced component 
    */
-  bindClickout(() => {
+  bindHandler(() => {
     console.log('clickout');
   });
 
