@@ -13,7 +13,7 @@ const useClickout = (events = defaultEvents) => {
   useEffect(() => {
     const handler = (event) => {
       const isOut = !!refWrap.current && !refWrap.current.contains(event.target);
-      if (isOut) doEvent();
+      if (isOut) doEvent(event, refWrap);
     };
 
     events.forEach((event) => {
