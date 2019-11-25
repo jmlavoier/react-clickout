@@ -4,25 +4,25 @@ const defaultEvents = ['mousedown', 'touchstart'];
 
 const useClickout = (events = defaultEvents) => {
   const refWrap = useRef();
-  let handleClickout = () => {};
-
-  const handleClick = (event) => {
-    const isOut = !!refWrap.current && !refWrap.current.contains(event.target);
-    if (isOut) handleClickout();
-  };
+  let doEvent = () => {};
 
   const bindClickout = (clickoutFn) => {
-    handleClickout = clickoutFn;
+    doEvent = clickoutFn;
   };
 
   useEffect(() => {
+    const handler = (event) => {
+      const isOut = !!refWrap.current && !refWrap.current.contains(event.target);
+      if (isOut) doEvent();
+    };
+
     events.forEach((event) => {
-      document.addEventListener(event, handleClick);
+      document.addEventListener(event, handler);
     });
 
     return () => {
       events.forEach((event) => {
-        document.removeEventListener(event, handleClick);
+        document.removeEventListener(event, handler);
       });
     };
   });
