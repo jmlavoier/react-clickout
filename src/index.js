@@ -25,7 +25,7 @@ const useClickout = (events = defaultEvents) => {
         document.removeEventListener(event, handler);
       });
     };
-  });
+  }, [events]);
 
   return [refWrap, bindClickout];
 };
