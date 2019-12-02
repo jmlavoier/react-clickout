@@ -4,16 +4,16 @@ const defaultEvents = ['mousedown', 'touchstart'];
 
 const useClickout = (events = defaultEvents) => {
   const refWrap = useRef();
-  let doEvent = () => {};
+  const doEvent = useRef(() => {});
 
   const bindClickout = (clickoutFn) => {
-    doEvent = clickoutFn;
+    doEvent.current = clickoutFn;
   };
 
   useEffect(() => {
     const handler = (event) => {
       const isOut = !!refWrap.current && !refWrap.current.contains(event.target);
-      if (isOut) doEvent(event, refWrap);
+      if (isOut) doEvent.current(event, refWrap);
     };
 
     events.forEach((event) => {
