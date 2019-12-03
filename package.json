@@ -10,7 +10,8 @@
     "lint": "eslint src",
     "build": "babel src -o dist/index.js",
     "test": "jest tests",
-    "test:watch": "jest tests --watch"
+    "test:watch": "jest tests --watch",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "peerDependencies": {
     "react": "^16.8.0",
@@ -22,6 +23,7 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-jest": "^24.9.0",
+    "coveralls": "^3.0.9",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.7.0",
