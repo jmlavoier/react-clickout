@@ -2,7 +2,7 @@
 
 # react-use-clickout
 [![Build Status](https://travis-ci.org/jmlavoier/react-use-clickout.svg?branch=master)](https://travis-ci.org/jmlavoier/react-use-clickout)
-[![Coverage Status](https://coveralls.io/repos/github/jmlavoier/react-use-clickout/badge.svg?branch=master)](https://coveralls.io/github/jmlavoier/react-use-clickout?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/jmlavoier/react-use-clickout/badge.svg?branch=master&service=github)](https://coveralls.io/github/jmlavoier/react-use-clickout?branch=master)
 
 It's a custom hook that handles an event after clicking out of the component
 
