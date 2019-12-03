@@ -38,4 +38,29 @@ describe('use-clickout', () => {
 
     expect(mockFn).toHaveBeenCalled();
   });
+
+
+  it('should remove listener on unmount component', () => {
+    window.document.removeEventListener = jest.fn();
+
+    const Wrapper = () => {
+      const [refWrap, bindClickout] = useClickout();
+
+      bindClickout(() => {});
+
+      return (
+        <div>
+          <div className="in" ref={refWrap}>click in</div>
+          <div className="out">
+            click out
+          </div>
+        </div>
+      );
+    };
+
+    const wrapper = mount(<Wrapper />);
+    wrapper.unmount();
+
+    expect(window.document.removeEventListener).toHaveBeenCalled();
+  });
 });
