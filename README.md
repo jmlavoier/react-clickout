@@ -3,7 +3,7 @@
 # react-use-clickout
 [![Build Status](https://travis-ci.org/jmlavoier/react-use-clickout.svg?branch=master)](https://travis-ci.org/jmlavoier/react-use-clickout)
 
-It's custom hook that handles an event after clicking outside of the component
+It's a custom hook that handles an event after clicking out of the component
 
 ## Get started
 Alright, let's go. First you should install the library
@@ -62,12 +62,10 @@ Changing **Events** is possible. You can pass an array with the events to be lis
 const [ref, bindClickout] = useClickout(['click']);
 ```
 
-
-Although the name of this is *clickout* it isn't too specific about click event, you can use others.
+Although the name of this library is *clickout*, it isn't only about click event. 
 
 
 ### Pre requisites
 It has the `react@^16.8.0` and `react-dom@^16.8.0` as peer-dependencies
 
 ## Contributing
-
