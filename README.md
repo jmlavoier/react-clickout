@@ -1,6 +1,8 @@
 ![icon](icon.png)
 
 # react-use-clickout
+[![Build Status](https://travis-ci.org/jmlavoier/react-use-clickout.svg?branch=master)](https://travis-ci.org/jmlavoier/react-use-clickout)
+
 It's custom hook that handles an event after clicking outside of the component
 
 ## Get started
