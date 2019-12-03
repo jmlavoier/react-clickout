@@ -1,6 +1,6 @@
 {
   "name": "react-use-clickout",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "custom react hook to handle an event on click ouside of a component",
   "main": "dist/index.js",
   "repository": "git@github.com:jmlavoier/react-use-clickout.git",
