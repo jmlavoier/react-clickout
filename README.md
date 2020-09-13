@@ -6,6 +6,8 @@
 
 It's a custom hook that handles an event after clicking out of the component
 
+> This library is deprecated in order to encourage you to use [useClickAway](https://github.com/streamich/react-use/blob/master/docs/useClickAway.md) from [react-use](https://github.com/streamich/react-use) library.
+
 ## Get started
 Alright, let's go. First you should install the library
 
